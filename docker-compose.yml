@@ -1,0 +1,13 @@
+
+version: '3'
+services:
+
+  jupyter:
+    build: .
+    image: jaeo/mdd-2022
+    container_name: jupyter 
+    command: jupyter lab --NotebookApp.notebook_dir='/ws'
+    working_dir: /ws 
+    ports: 
+      - 8888:8888   # jupyter
+      - 5000:5000   # mlflow ui
